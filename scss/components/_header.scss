@@ -7,12 +7,16 @@ body {
         "main main main"
         "footer footer footer";
     @include tablet{              
-        grid-template-rows: 170px 8300px 150px;
+        grid-template-rows: 170px 8700px 150px;
         
     }   
     @include mobile{
-        grid-template-rows: 170px 9500px 150px;
+        grid-template-rows: 170px 8650px 150px;
     } 
+    @include desktop{
+        grid-template-rows: 170px 7500px 150px;
+    } 
+    
     header {
         width: 100%;
         grid-area: header; 

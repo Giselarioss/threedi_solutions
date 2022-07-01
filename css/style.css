@@ -83,12 +83,17 @@ body {
 }
 @media only screen and (min-width: 451px) and (max-width: 990px) {
   body {
-    grid-template-rows: 170px 8300px 150px;
+    grid-template-rows: 170px 8700px 150px;
   }
 }
 @media only screen and (max-width: 450px) {
   body {
-    grid-template-rows: 170px 9500px 150px;
+    grid-template-rows: 170px 8650px 150px;
+  }
+}
+@media only screen and (min-width: 990px) and (max-width: 1068px) {
+  body {
+    grid-template-rows: 170px 7500px 150px;
   }
 }
 body header {
@@ -418,6 +423,11 @@ body header .nav-only .bg-nav .nav-position .contactUs {
     height: 3600px;
   }
 }
+@media only screen and (min-width: 990px) and (max-width: 1068px) {
+  #portfolio {
+    height: 3600px;
+  }
+}
 #portfolio h1 {
   padding-top: 60px;
   padding-bottom: 40px;
@@ -516,6 +526,13 @@ body header .nav-only .bg-nav .nav-position .contactUs {
     background-size: cover;
   }
 }
+@media only screen and (max-width: 450px) {
+  #contact {
+    height: 700px;
+    background-position: center;
+    background-size: cover;
+  }
+}
 #contact .contact {
   text-align: center;
 }
@@ -524,6 +541,11 @@ body header .nav-only .bg-nav .nav-position .contactUs {
   color: orange;
   padding-top: 100px;
   line-height: 40px;
+}
+@media only screen and (max-width: 450px) {
+  #contact .contact p {
+    padding: 70px;
+  }
 }
 
 #contact2 {
@@ -539,6 +561,16 @@ body header .nav-only .bg-nav .nav-position .contactUs {
   font-size: 2.5rem;
   color: orange;
 }
+@media only screen and (min-width: 451px) and (max-width: 990px) {
+  #contact2 h1 {
+    text-align: center;
+  }
+}
+@media only screen and (max-width: 450px) {
+  #contact2 h1 {
+    text-align: center;
+  }
+}
 #contact2 .contact2-flex {
   padding: 40px;
   border: 2px solid #13334C;
@@ -546,6 +578,22 @@ body header .nav-only .bg-nav .nav-position .contactUs {
   justify-content: center;
   align-items: center;
   font-family: "bold";
+}
+@media only screen and (min-width: 451px) and (max-width: 990px) {
+  #contact2 .contact2-flex {
+    flex-direction: column;
+  }
+  #contact2 .contact2-flex img {
+    width: 400px;
+  }
+}
+@media only screen and (max-width: 450px) {
+  #contact2 .contact2-flex {
+    flex-direction: column;
+  }
+  #contact2 .contact2-flex img {
+    width: 500px;
+  }
 }
 #contact2 .contact2-flex .contact-form {
   padding-left: 40px;
@@ -558,6 +606,17 @@ body header .nav-only .bg-nav .nav-position .contactUs {
   margin-top: 4px;
   box-sizing: border-box;
   border-radius: 10px;
+}
+@media only screen and (min-width: 451px) and (max-width: 990px) {
+  #contact2 .contact2-flex .contact-form .login-box {
+    text-align: center;
+    width: 500px;
+  }
+}
+@media only screen and (max-width: 450px) {
+  #contact2 .contact2-flex .contact-form .login-box {
+    width: 600px;
+  }
 }
 #contact2 .contact2-flex .contact-form .login-box form a {
   position: relative;

@@ -9,6 +9,9 @@
     @include mobile{
         height: 3600px;
     }
+    @include desktop{
+        height: 3600px;
+    }
     h1{
         padding-top: 60px;
         padding-bottom: 40px;

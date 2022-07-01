@@ -8,7 +8,13 @@
         letter-spacing: 3px;
         padding: 40px;
         font-size: nth($font, 3);
-        color: nth($colors, 8);        
+        color: nth($colors, 8);
+        @include tablet{
+            text-align: center;
+        } 
+        @include mobile{
+            text-align: center;
+        }               
     }
     .contact2-flex{   
         padding: 40px;
@@ -17,17 +23,39 @@
         justify-content: center;
         align-items: center;
         font-family: 'bold';
+        @include tablet{
+            flex-direction: column;
+
+            img{
+                width: 400px;
+            }
+        }
+        @include mobile{
+            flex-direction: column;
+
+            img{
+                width: 500px;
+            }
+        }
         .contact-form{
             padding-left: 40px;
             letter-spacing: 2px;
             color: nth($colors, 7);
-            font-size: nth($font, 2);
+            font-size: nth($font, 2);            
             .login-box {                                          
                 padding: 40px;    
                 margin-top: 4px;                
                 box-sizing: border-box;                
-                border-radius: 10px;     
-
+                border-radius: 10px; 
+                @include tablet{
+                    text-align: center;
+                    width: 500px;
+                    
+                }
+                @include mobile{
+                    width: 600px;
+                    
+                }
                 form a {
                     position: relative;                
                     padding: 10px 15px;

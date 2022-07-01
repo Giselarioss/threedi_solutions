@@ -6,7 +6,12 @@
     @include tablet{
         height: 600px;
         background-position: center;
-        background-size: cover
+        background-size: cover;
+    }
+    @include mobile{
+        height: 700px;
+        background-position: center;
+        background-size: cover;
     }
     .contact{          
         text-align: center;
@@ -15,6 +20,9 @@
             color: nth($colors, 8);
             padding-top: 100px;
             line-height: 40px; 
+            @include mobile{
+                padding: 70px;
+            }
         }
     }
 }    

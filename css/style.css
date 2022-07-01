@@ -78,22 +78,29 @@ footer .footer2 .copy {
 body {
   position: absolute;
   display: grid;
+  grid-template-columns: repeat(1, 1fr);
   grid-template-rows: 170px 6500px 150px;
   grid-template-areas: "header header header" "main main main" "footer footer footer";
 }
 @media only screen and (min-width: 451px) and (max-width: 990px) {
   body {
+    grid-template-columns: 1, 1fr;
     grid-template-rows: 170px 8700px 150px;
+    grid-template-areas: "header header" "main main" "footer footer";
   }
 }
 @media only screen and (max-width: 450px) {
   body {
+    grid-template-columns: 1, 1fr;
     grid-template-rows: 170px 8650px 150px;
+    grid-template-areas: "header" "main" "footer";
   }
 }
 @media only screen and (min-width: 990px) and (max-width: 1068px) {
   body {
+    grid-template-columns: repeat(1, 1fr);
     grid-template-rows: 170px 7500px 150px;
+    grid-template-areas: "header header header" "main main main" "footer footer footer";
   }
 }
 body header {

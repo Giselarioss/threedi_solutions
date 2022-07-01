@@ -1,0 +1,20 @@
+#contact{   
+    height: 500px;    
+    background-image: url(../bg/contact1.jpg);
+    background-attachment: fixed;    
+    font-family: 'regular';
+    @include tablet{
+        height: 600px;
+        background-position: center;
+        background-size: cover
+    }
+    .contact{          
+        text-align: center;
+        p{
+            font-size: nth($font, 5);            
+            color: nth($colors, 8);
+            padding-top: 100px;
+            line-height: 40px; 
+        }
+    }
+}    

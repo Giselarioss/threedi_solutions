@@ -1,0 +1,61 @@
+#services{    
+    height: 950px;
+    background-image: url(../bg/bg-services.jpg);    
+    background-repeat: no-repeat;
+    background-size: cover;    
+    font-family: 'bold';
+    @include tablet{
+        height: 1200px;
+    }
+    @include mobile{
+        height: 1200px;
+        padding-top: 30px;
+    }
+    .h1{
+        color: nth($colors, 8);
+        letter-spacing: 2px;        
+        text-align: center;
+        letter-spacing: 3px;
+        font-size: nth($font, 3); 
+        padding-top: 40px;          
+    }
+    & p{        
+        color: nth($colors, 8);
+        text-align: center;
+        font-size: nth($font, 1); 
+        letter-spacing: 2px;
+        line-height: 40px;
+        padding: 10px 60px 10px 60px;     
+    }
+    .services-flex{
+        height: 200px;
+        padding-top: 20px;
+        padding-right: 40px;
+        padding-left: 40px;
+        display: grid;
+        align-items: center;
+        gap: 5px;
+        grid-template-columns: repeat(3, 1fr);
+        justify-content: start;   
+        align-items: flex-start;      
+        text-align: center;  
+        img{    
+            background-color: white;       
+            background-image: url(../bg/bg.png);
+            background-position: right;
+            background-repeat: no-repeat;
+            border-radius: 50px;
+            padding: 20px; 
+            border-top: 2px solid nth($colors, 5);
+            border-right: 5px solid nth($colors, 5); 
+            &:hover {
+                transform: scale(1.1);
+            }          
+        }
+        .img7{
+            grid-column: 1 / span 3;
+   
+        }     
+        
+    }
+}

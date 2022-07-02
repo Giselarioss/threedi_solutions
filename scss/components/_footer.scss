@@ -1,4 +1,5 @@
 footer {
+    overflow: hidden;
     grid-area: footer;
     background-color: nth($colors, 4);
 

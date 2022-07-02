@@ -1,41 +1,23 @@
 .services2{  
+    overflow: hidden;
     padding-top: 40px;    
     height: 500px;
     display: flex;  
     font-family: 'regular'; 
     line-height: 40px;
     color: nth($colors, 8);
-    @include tablet{
-        height: 750px;
-        flex-direction: column;
-        align-items: center;
-    }
-    @include mobile{
-        height: 700px;                
-        flex-direction: column;
-        align-items: center;
-    }
+    
     h1{
         font-family: 'bold';
         font-size: nth($font, 3);
-        @include tablet{
-            padding: 20px 30px 0 30px;
-        }
-        @include mobile{
-            padding: 20px 30px 0 30px;
-        }
+        
         
     }
     p{
         font-size: nth($font, 1);
         padding-top: 20px;
         padding-right: 10px;
-        @include tablet{
-            padding: 20px 30px 0 30px;
-        }
-        @include mobile{
-            padding: 20px 30px 0 30px;
-        }
+        
     }   
     
 }

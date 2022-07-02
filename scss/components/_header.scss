@@ -1,37 +1,13 @@
-body {         
+body {            
     display: grid; 
     grid-template-columns:repeat(1, 1fr);   
     grid-template-rows: 170px 6500px 150px;
     grid-template-areas:
         "header header header"
         "main main main"
-        "footer footer footer";
-    @include tablet{     
-        grid-template-columns:(1, 1fr);         
-        grid-template-rows: 170px 8700px 150px;
-        grid-template-areas:
-        "header header"
-        "main main"
-        "footer footer";
-    }   
-    @include mobile{
-        grid-template-columns:(1, 1fr);
-        grid-template-rows: 170px 8650px 150px;
-        grid-template-areas:
-        "header"
-        "main"
-        "footer";
-    } 
-    @include desktop{
-        grid-template-columns:repeat(1, 1fr);
-        grid-template-rows: 170px 7500px 150px;
-        grid-template-areas:
-        "header header header"
-        "main main main"
-        "footer footer footer";
-    } 
-    
+        "footer footer footer";    
     header {
+        overflow: hidden;
         width: 100%;
         grid-area: header; 
         .nav-only {
@@ -79,12 +55,7 @@ body {
                         letter-spacing: 3px;                        
                         padding: 2px 10px 2px 30px;
                         border-right: 1px solid nth($colors, 5);
-                        @include tablet{
-                            border-right: none;
-                        }
-                        @include mobile{
-                            border-radius: none;
-                        }
+                       
                         &:hover {
                             color: nth($colors, 1);
                             text-shadow: none;

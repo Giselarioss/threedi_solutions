@@ -1,18 +1,9 @@
 #contact{   
+    overflow: hidden;
     height: 500px;    
     background-image: url(../bg/contact1.jpg);
     background-attachment: fixed;    
-    font-family: 'regular';
-    @include tablet{
-        height: 600px;
-        background-position: center;
-        background-size: cover;
-    }
-    @include mobile{
-        height: 700px;
-        background-position: center;
-        background-size: cover;
-    }
+    font-family: 'regular';   
     .contact{          
         text-align: center;
         p{
@@ -20,9 +11,7 @@
             color: nth($colors, 8);
             padding-top: 100px;
             line-height: 40px; 
-            @include mobile{
-                padding: 70px;
-            }
+            
         }
     }
 }    

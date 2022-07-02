@@ -1,16 +1,11 @@
 #services{    
+    overflow: hidden;
     height: 950px;
     background-image: url(../bg/bg-services.jpg);    
     background-repeat: no-repeat;
     background-size: cover;    
     font-family: 'bold';
-    @include tablet{
-        height: 1200px;
-    }
-    @include mobile{
-        height: 1200px;
-        padding-top: 30px;
-    }
+    
     .h1{
         color: nth($colors, 8);
         letter-spacing: 2px;        

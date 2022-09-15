@@ -1,6 +1,6 @@
 #contact{   
-    overflow: hidden;
-    height: 500px;    
+    scroll-margin: 170px;
+    height: 400px;    
     background-image: url(../bg/contact1.jpg);
     background-attachment: fixed;    
     font-family: 'regular';   
@@ -9,7 +9,7 @@
         p{
             font-size: nth($font, 5);            
             color: nth($colors, 8);
-            padding-top: 100px;
+            padding-top: 50px;
             line-height: 40px; 
             
         }

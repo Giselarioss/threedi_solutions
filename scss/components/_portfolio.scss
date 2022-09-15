@@ -1,9 +1,15 @@
 #portfolio{
-    overflow: hidden;
-    height: 2500px;
+    scroll-margin: 170px;    
+    height: auto;
     position: relative;
     width: 100%;
-    padding: 45px 0 15px 0;
+    padding: 25px 0 15px 0;
+    @include tablet{
+        height: auto;
+    }
+    @include mobile{
+        height: auto;
+    }
     
     h1{
         padding-top: 60px;

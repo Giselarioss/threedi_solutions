@@ -14,10 +14,6 @@
   src: url("../font/Poppins-Regular.ttf");
   font-display: swap;
 }
-html {
-  scroll-behavior: smooth;
-}
-
 /*----- 8 ------*/
 footer {
   overflow: hidden;
@@ -79,13 +75,32 @@ footer .footer2 .copy {
 body {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
-  grid-template-rows: 170px 6500px 150px;
+  grid-template-rows: 170px auto 150px;
   grid-template-areas: "header header header" "main main main" "footer footer footer";
 }
+@media only screen and (min-width: 451px) and (max-width: 990px) {
+  body {
+    grid-template-rows: 170px 8100px 150px;
+  }
+}
+@media only screen and (max-width: 450px) {
+  body {
+    grid-template-rows: 170px 8500px 150px;
+  }
+}
 body header {
-  overflow: hidden;
-  width: 100%;
+  max-width: 100%;
   grid-area: header;
+}
+@media only screen and (min-width: 451px) and (max-width: 990px) {
+  body header .logo {
+    text-align: center;
+  }
+}
+@media only screen and (max-width: 450px) {
+  body header .logo {
+    text-align: center;
+  }
 }
 body header .nav-only {
   width: 100%;
@@ -120,11 +135,33 @@ body header .nav-only .bg-nav {
   height: 55px;
   background-color: #13334C;
 }
+@media only screen and (min-width: 451px) and (max-width: 990px) {
+  body header .nav-only .bg-nav {
+    max-width: 90%;
+    border: 1px solid rgb(4, 4, 48);
+  }
+}
+@media only screen and (max-width: 450px) {
+  body header .nav-only .bg-nav {
+    max-width: 90%;
+    border: 1px solid rgb(4, 4, 48);
+  }
+}
 body header .nav-only .bg-nav .nav1 {
   display: none;
 }
 body header .nav-only .bg-nav .nav-position {
   justify-content: center;
+}
+@media only screen and (min-width: 451px) and (max-width: 990px) {
+  body header .nav-only .bg-nav .nav-position {
+    padding-left: 60px;
+  }
+}
+@media only screen and (min-width: 451px) and (max-width: 990px) {
+  body header .nav-only .bg-nav .nav-position {
+    padding-left: 60px;
+  }
 }
 body header .nav-only .bg-nav .nav-position a {
   color: #F6F6E9;
@@ -134,6 +171,22 @@ body header .nav-only .bg-nav .nav-position a {
   letter-spacing: 3px;
   padding: 2px 10px 2px 30px;
   border-right: 1px solid #fdb438;
+}
+@media only screen and (min-width: 451px) and (max-width: 990px) {
+  body header .nav-only .bg-nav .nav-position a {
+    width: 30%;
+    padding-bottom: 5px;
+    border-bottom: 1px solid rgb(4, 4, 48);
+    border-right: none;
+  }
+}
+@media only screen and (max-width: 450px) {
+  body header .nav-only .bg-nav .nav-position a {
+    width: 30%;
+    padding-bottom: 5px;
+    border-bottom: 1px solid rgb(4, 4, 48);
+    border-right: none;
+  }
 }
 body header .nav-only .bg-nav .nav-position a:hover {
   color: rgb(221, 90, 40);
@@ -145,6 +198,19 @@ body header .nav-only .bg-nav .nav-position .contactUs {
 @media only screen and (min-width: 451px) and (max-width: 990px) {
   body header .nav-only .bg-nav .padding-nav {
     padding: 0;
+    max-width: 97%;
+  }
+  body header .nav-only .bg-nav .padding-nav .nav-mobile {
+    height: 150px;
+    margin-top: 5px;
+    background-color: #13334C;
+    font-family: "regular";
+  }
+}
+@media only screen and (max-width: 450px) {
+  body header .nav-only .bg-nav .padding-nav {
+    padding: 0;
+    max-width: 97%;
   }
   body header .nav-only .bg-nav .padding-nav .nav-mobile {
     height: 150px;
@@ -155,14 +221,24 @@ body header .nav-only .bg-nav .nav-position .contactUs {
 }
 
 #home {
-  overflow: hidden;
+  scroll-margin: 250px;
   grid-area: main;
   width: 100%;
-  height: 750px;
+  height: 650px;
   background-image: url(../bg/printer1.jpg);
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
+}
+@media only screen and (min-width: 451px) and (max-width: 990px) {
+  #home {
+    background-size: 990px 650px;
+  }
+}
+@media only screen and (max-width: 450px) {
+  #home {
+    background-size: 700px 650px;
+  }
 }
 #home .home {
   padding: 150px;
@@ -187,7 +263,8 @@ body header .nav-only .bg-nav .nav-position .contactUs {
 }
 
 #about {
-  overflow: hidden;
+  max-width: 100%;
+  scroll-margin: 170px;
   background-image: url(../bg/abstract.png);
   background-position: right;
   background-repeat: no-repeat;
@@ -195,15 +272,38 @@ body header .nav-only .bg-nav .nav-position .contactUs {
   height: 450px;
   display: flex;
 }
+@media only screen and (min-width: 451px) and (max-width: 990px) {
+  #about {
+    align-items: center;
+    background-size: 990px 600px;
+    height: auto;
+    flex-direction: column-reverse;
+    background-image: none;
+  }
+}
+@media only screen and (max-width: 450px) {
+  #about {
+    align-items: center;
+    background-size: 700px 600px;
+    height: auto;
+    flex-direction: column-reverse;
+    background-image: none;
+  }
+}
 #about div img {
   padding-top: 30px;
-  width: 100%;
+  max-width: 100%;
 }
 #about .about-1 {
-  width: 50%;
+  max-width: 50%;
   padding: 50px;
   font-family: "regular";
   color: orange;
+}
+@media only screen and (min-width: 451px) and (max-width: 990px) {
+  #about .about-1 {
+    max-width: 90%;
+  }
 }
 #about .about-1 h1 {
   font-size: 2.5rem;
@@ -216,12 +316,25 @@ body header .nav-only .bg-nav .nav-position .contactUs {
 }
 
 #services {
-  overflow: hidden;
+  max-width: 100%;
+  scroll-margin: 170px;
   height: 950px;
   background-image: url(../bg/bg-services.jpg);
-  background-repeat: no-repeat;
+  background-position: center;
   background-size: cover;
   font-family: "bold";
+}
+@media only screen and (min-width: 451px) and (max-width: 990px) {
+  #services {
+    background-size: 990px 1200px;
+    height: 1200px;
+  }
+}
+@media only screen and (max-width: 450px) {
+  #services {
+    background-size: 700px 1100px;
+    height: 1100px;
+  }
 }
 #services .h1 {
   color: orange;
@@ -242,25 +355,18 @@ body header .nav-only .bg-nav .nav-position .contactUs {
 #services .services-flex {
   height: 200px;
   padding-top: 20px;
-  padding-right: 40px;
-  padding-left: 40px;
   display: grid;
+  grid-template-columns: auto;
   align-items: center;
-  gap: 5px;
-  grid-template-columns: repeat(3, 1fr);
-  justify-content: start;
-  align-items: flex-start;
+  justify-content: center;
+  align-items: stretch;
   text-align: center;
 }
 #services .services-flex img {
   background-color: white;
-  background-image: url(../bg/bg.png);
-  background-position: right;
-  background-repeat: no-repeat;
   border-radius: 50px;
   padding: 20px;
-  border-top: 2px solid #fdb438;
-  border-right: 5px solid #fdb438;
+  border: 2px solid orange;
 }
 #services .services-flex img:hover {
   transform: scale(1.1);
@@ -270,7 +376,8 @@ body header .nav-only .bg-nav .nav-position .contactUs {
 }
 
 .services2 {
-  overflow: hidden;
+  width: 90%;
+  margin: 20px auto;
   padding-top: 40px;
   height: 500px;
   display: flex;
@@ -278,22 +385,82 @@ body header .nav-only .bg-nav .nav-position .contactUs {
   line-height: 40px;
   color: orange;
 }
+@media only screen and (min-width: 451px) and (max-width: 990px) {
+  .services2 {
+    text-align: center;
+    width: 100%;
+    height: auto;
+    display: inline;
+  }
+}
+@media only screen and (max-width: 450px) {
+  .services2 {
+    text-align: center;
+    width: 100%;
+    height: auto;
+    display: inline;
+  }
+}
 .services2 h1 {
   font-family: "bold";
   font-size: 2.5rem;
 }
+@media only screen and (min-width: 451px) and (max-width: 990px) {
+  .services2 h1 {
+    text-align: left;
+    padding-left: 20px;
+    margin-top: 60px;
+  }
+}
+@media only screen and (max-width: 450px) {
+  .services2 h1 {
+    text-align: left;
+    padding-left: 20px;
+    margin-top: 60px;
+  }
+}
 .services2 p {
+  width: 90%;
   font-size: 1rem;
   padding-top: 20px;
   padding-right: 10px;
 }
+@media only screen and (min-width: 451px) and (max-width: 990px) {
+  .services2 p {
+    text-align: center;
+    width: 80%;
+    margin: 20px auto;
+  }
+}
+@media only screen and (max-width: 450px) {
+  .services2 p {
+    text-align: center;
+    margin: 20px auto;
+  }
+}
+@media only screen and (min-width: 990px) {
+  .services2 img {
+    width: 500px;
+    height: auto;
+  }
+}
 
 #portfolio {
-  overflow: hidden;
-  height: 2500px;
+  scroll-margin: 170px;
+  height: auto;
   position: relative;
   width: 100%;
-  padding: 45px 0 15px 0;
+  padding: 25px 0 15px 0;
+}
+@media only screen and (min-width: 451px) and (max-width: 990px) {
+  #portfolio {
+    height: auto;
+  }
+}
+@media only screen and (max-width: 450px) {
+  #portfolio {
+    height: auto;
+  }
 }
 #portfolio h1 {
   padding-top: 60px;
@@ -381,8 +548,8 @@ body header .nav-only .bg-nav .nav-position .contactUs {
 }
 
 #contact {
-  overflow: hidden;
-  height: 500px;
+  scroll-margin: 170px;
+  height: 400px;
   background-image: url(../bg/contact1.jpg);
   background-attachment: fixed;
   font-family: "regular";
@@ -393,14 +560,15 @@ body header .nav-only .bg-nav .nav-position .contactUs {
 #contact .contact p {
   font-size: 1.4rem;
   color: orange;
-  padding-top: 100px;
+  padding-top: 50px;
   line-height: 40px;
 }
 
 #contact2 {
-  overflow: hidden;
+  max-width: 100%;
   width: 100%;
-  height: 600px;
+  height: auto;
+  margin-bottom: 30px;
 }
 #contact2 h1 {
   padding-top: 60px;
@@ -417,6 +585,7 @@ body header .nav-only .bg-nav .nav-position .contactUs {
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
   font-family: "bold";
 }
 #contact2 .contact-form {
@@ -424,6 +593,12 @@ body header .nav-only .bg-nav .nav-position .contactUs {
   letter-spacing: 2px;
   color: rgb(16, 20, 43);
   font-size: 2rem;
+}
+@media only screen and (min-width: 451px) and (max-width: 990px) {
+  #contact2 .contact-form {
+    width: 80%;
+    margin: 20px auto;
+  }
 }
 #contact2 .contact-form .login-box {
   padding: 40px;

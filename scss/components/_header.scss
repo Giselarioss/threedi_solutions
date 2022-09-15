@@ -1,15 +1,30 @@
 body {            
-    display: grid; 
+    display: grid;     
     grid-template-columns:repeat(1, 1fr);   
-    grid-template-rows: 170px 6500px 150px;
+    grid-template-rows: 170px auto 150px;
     grid-template-areas:
         "header header header"
         "main main main"
-        "footer footer footer";    
-    header {
-        overflow: hidden;
-        width: 100%;
+        "footer footer footer";
+        @include tablet{
+            grid-template-rows: 170px 8100px 150px;
+        }  
+        @include mobile{
+            grid-template-rows: 170px 8500px 150px;
+        }    
+    header {        
+        max-width: 100%;
         grid-area: header; 
+        @include tablet{
+            .logo{
+                text-align: center;
+            }
+        }
+        @include mobile{
+            .logo{
+                text-align: center;
+            }
+        }
         .nav-only {
             width: 100%;
             height: 170px;
@@ -41,12 +56,27 @@ body {
             }
             .bg-nav {
                 height: 55px;
-                background-color: nth($colors, 4);
+                background-color: nth($colors, 4);                
+                @include tablet{
+                    max-width: 90%;
+                    border: 1px solid rgb(4, 4, 48); 
+                                       
+                }
+                @include mobile{
+                    max-width: 90%;
+                    border: 1px solid rgb(4, 4, 48);
+                }
                 .nav1 {
                     display: none;
                 }
                 .nav-position {
-                    justify-content: center;
+                    justify-content: center;  
+                    @include tablet{
+                        padding-left: 60px;
+                    }    
+                    @include tablet{
+                        padding-left: 60px;
+                    }                  
                     a {
                         color: nth($colors, 2);
                         font-family: 'regular';
@@ -55,6 +85,18 @@ body {
                         letter-spacing: 3px;                        
                         padding: 2px 10px 2px 30px;
                         border-right: 1px solid nth($colors, 5);
+                        @include tablet{
+                            width: 30%; 
+                            padding-bottom: 5px;                           
+                            border-bottom: 1px solid rgb(4, 4, 48); 
+                            border-right: none;                   
+                        }
+                        @include mobile{
+                            width: 30%;
+                            padding-bottom: 5px;  
+                            border-bottom: 1px solid rgb(4, 4, 48);                             
+                            border-right: none; 
+                        }
                        
                         &:hover {
                             color: nth($colors, 1);
@@ -67,7 +109,8 @@ body {
                 }
                 @include tablet{   
                     .padding-nav{
-                        padding: 0;                        
+                        padding: 0;
+                        max-width: 97%;                        
                         .nav-mobile {
                             height: 150px;
                             margin-top: 5px;
@@ -75,7 +118,19 @@ body {
                             font-family: 'regular';                        
                         }        
                     }          
-                }            
+                } 
+                @include mobile{   
+                    .padding-nav{
+                        padding: 0;
+                        max-width: 97%;                        
+                        .nav-mobile {
+                            height: 150px;
+                            margin-top: 5px;
+                            background-color: nth($colors, 4);
+                            font-family: 'regular';                        
+                        }        
+                    }          
+                }                       
             }
         }
     }

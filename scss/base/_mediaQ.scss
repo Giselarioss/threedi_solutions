@@ -10,10 +10,8 @@
     }
     
 }
-
 @mixin desktop {
-    @media only screen and (min-width: 990px)and(max-width:1068px){
-        @content;      
+    @media only screen and (min-width: 990px){
+        @content;
     }
-    
 }

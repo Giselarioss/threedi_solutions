@@ -1,10 +1,20 @@
-#services{    
-    overflow: hidden;
+#services{  
+    max-width: 100%;
+    scroll-margin: 170px;    
     height: 950px;
     background-image: url(../bg/bg-services.jpg);    
-    background-repeat: no-repeat;
+    background-position: center;
     background-size: cover;    
     font-family: 'bold';
+    @include tablet{        
+        background-size: 990px 1200px; 
+        height: 1200px;    
+    
+    }
+    @include mobile{        
+        background-size: 700px 1100px;
+        height: 1100px;        
+    }
     
     .h1{
         color: nth($colors, 8);
@@ -22,27 +32,29 @@
         line-height: 40px;
         padding: 10px 60px 10px 60px;     
     }
-    .services-flex{
+    .services-flex{ 
+             
         height: 200px;
-        padding-top: 20px;
-        padding-right: 40px;
-        padding-left: 40px;
+        padding-top: 20px;        
         display: grid;
-        align-items: center;
-        gap: 5px;
-        grid-template-columns: repeat(3, 1fr);
-        justify-content: start;   
-        align-items: flex-start;      
-        text-align: center;  
+        grid-template-columns: auto;
+        align-items: center;        
+        justify-content: center;
+        align-items: stretch;                    
+        text-align: center;         
+        @include tablet{        
+                
+        
+        }
+        @include mobile{        
+                    
+        } 
         img{    
-            background-color: white;       
-            background-image: url(../bg/bg.png);
-            background-position: right;
-            background-repeat: no-repeat;
+            background-color: white;           
             border-radius: 50px;
-            padding: 20px; 
-            border-top: 2px solid nth($colors, 5);
-            border-right: 5px solid nth($colors, 5); 
+            padding: 20px;
+            border: 2px solid orange;            
+            
             &:hover {
                 transform: scale(1.1);
             }          

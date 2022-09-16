@@ -1,8 +1,17 @@
 #contact2 {
-    max-width: 100%;
-    width: 100%;
-    height: auto;
-    margin-bottom: 30px;   
+    max-width: 100%;    
+    height: 800px;
+    margin-bottom: 30px;
+    @include desktop{
+        height: auto;
+    }
+    @include tablet{
+        height: auto;        
+    } 
+    @include mobile{
+        height: auto;
+        
+    }  
 
     h1 {
         padding-top: 60px;
@@ -22,7 +31,20 @@
         align-items: center;
         text-align: center;
         font-family: 'bold';
-        
+        @include tablet{
+            padding: 20px;
+            flex-direction: column;
+            img{
+                width: 90%;
+            }
+        }
+        @include mobile{
+            flex-direction: column;
+            padding: 20px;
+            img{
+                width: 90%;
+            }
+        }
     }
 
     .contact-form {
@@ -31,8 +53,12 @@
         color: nth($colors, 7);
         font-size: nth($font, 2);
         @include tablet{
-            width: 80%;
-            margin: 20px auto;
+            width: 100%;
+            
+        }
+        @include mobile{
+            width: 90%;
+            
         }
 
         .login-box {
@@ -40,6 +66,7 @@
             margin-top: 4px;
             box-sizing: border-box;
             border-radius: 10px;
+           
 
             form a {
                 position: relative;

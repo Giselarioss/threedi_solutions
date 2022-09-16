@@ -75,17 +75,22 @@ footer .footer2 .copy {
 body {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
-  grid-template-rows: 170px auto 150px;
+  grid-template-rows: 170px 6100px 150px;
   grid-template-areas: "header header header" "main main main" "footer footer footer";
+}
+@media only screen and (min-width: 990px) {
+  body {
+    grid-template-rows: auto auto auto;
+  }
 }
 @media only screen and (min-width: 451px) and (max-width: 990px) {
   body {
-    grid-template-rows: 170px 8100px 150px;
+    grid-template-rows: 170px auto 150px;
   }
 }
 @media only screen and (max-width: 450px) {
   body {
-    grid-template-rows: 170px 8500px 150px;
+    grid-template-rows: 170px auto 150px;
   }
 }
 body header {
@@ -472,12 +477,24 @@ body header .nav-only .bg-nav .nav-position .contactUs {
 }
 #portfolio .galeria {
   width: 90%;
-  margin: auto;
+  margin: 10px;
   list-style: none;
   box-sizing: border-box;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
+}
+@media only screen and (min-width: 451px) and (max-width: 990px) {
+  #portfolio .galeria {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media only screen and (max-width: 450px) {
+  #portfolio .galeria {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 #portfolio .galeria li {
   margin: 5px;
@@ -486,6 +503,18 @@ body header .nav-only .bg-nav .nav-position .contactUs {
   width: 100%;
   height: 300px;
   border: 2px solid #13334C;
+}
+@media only screen and (min-width: 451px) and (max-width: 990px) {
+  #portfolio .galeria li img {
+    width: 70%;
+    height: auto;
+  }
+}
+@media only screen and (max-width: 450px) {
+  #portfolio .galeria li img {
+    width: 60%;
+    height: auto;
+  }
 }
 #portfolio .galeria p {
   height: 40px;
@@ -566,9 +595,23 @@ body header .nav-only .bg-nav .nav-position .contactUs {
 
 #contact2 {
   max-width: 100%;
-  width: 100%;
-  height: auto;
+  height: 800px;
   margin-bottom: 30px;
+}
+@media only screen and (min-width: 990px) {
+  #contact2 {
+    height: auto;
+  }
+}
+@media only screen and (min-width: 451px) and (max-width: 990px) {
+  #contact2 {
+    height: auto;
+  }
+}
+@media only screen and (max-width: 450px) {
+  #contact2 {
+    height: auto;
+  }
 }
 #contact2 h1 {
   padding-top: 60px;
@@ -588,6 +631,24 @@ body header .nav-only .bg-nav .nav-position .contactUs {
   text-align: center;
   font-family: "bold";
 }
+@media only screen and (min-width: 451px) and (max-width: 990px) {
+  #contact2 .contact2-flex {
+    padding: 20px;
+    flex-direction: column;
+  }
+  #contact2 .contact2-flex img {
+    width: 90%;
+  }
+}
+@media only screen and (max-width: 450px) {
+  #contact2 .contact2-flex {
+    flex-direction: column;
+    padding: 20px;
+  }
+  #contact2 .contact2-flex img {
+    width: 90%;
+  }
+}
 #contact2 .contact-form {
   padding-left: 40px;
   letter-spacing: 2px;
@@ -596,8 +657,12 @@ body header .nav-only .bg-nav .nav-position .contactUs {
 }
 @media only screen and (min-width: 451px) and (max-width: 990px) {
   #contact2 .contact-form {
-    width: 80%;
-    margin: 20px auto;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 450px) {
+  #contact2 .contact-form {
+    width: 90%;
   }
 }
 #contact2 .contact-form .login-box {

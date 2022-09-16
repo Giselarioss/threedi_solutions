@@ -21,18 +21,34 @@
     }
     .galeria{
         width: 90%;
-        margin: auto;
+        margin: 10px;
         list-style: none;        
         box-sizing: border-box;
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-around;    
+        justify-content: space-around;   
+        @include tablet{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+        } 
+        @include mobile{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+        } 
         li{
             margin: 5px;
             img{
                 width: 100%;
                 height: 300px;
                 border: 2px solid nth($colors, 4);
+                @include tablet{
+                    width: 70%;
+                    height: auto;
+                }
+                @include mobile{
+                    width: 60%;
+                    height: auto;
+                }
                 
             } 
         }

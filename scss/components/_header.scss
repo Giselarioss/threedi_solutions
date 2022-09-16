@@ -1,16 +1,19 @@
 body {            
     display: grid;     
     grid-template-columns:repeat(1, 1fr);   
-    grid-template-rows: 170px auto 150px;
+    grid-template-rows: 170px 6100px 150px;
     grid-template-areas:
         "header header header"
         "main main main"
         "footer footer footer";
+        @include desktop{
+            grid-template-rows: auto auto auto;
+        }
         @include tablet{
-            grid-template-rows: 170px 8100px 150px;
+            grid-template-rows: 170px auto 150px;
         }  
         @include mobile{
-            grid-template-rows: 170px 8500px 150px;
+            grid-template-rows: 170px auto 150px;
         }    
     header {        
         max-width: 100%;
